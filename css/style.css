@@ -1,0 +1,34 @@
+/*Reset*/
+
+* {	
+	margin: 0;
+	padding: 0
+}
+
+body {
+	color: #fcfcfc;
+	font: 14px 'Segoe UI', Arial, sans-serif;
+	background: #ccc
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: #54a6de;
+}
+
+.container {
+	width: 70%;
+	margin: 10px auto;
+	overflow: auto
+}
+
+#navbar {
+	display: block;
+	height: 40px;
+	background: #13181d;
+}
+
+#navbar a {
+	color: #fff;
+}
