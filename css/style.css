@@ -18,7 +18,7 @@ a {
 }
 
 .container {
-	width: 70%;
+	width: 65%;
 	margin: 10px auto;
 	overflow: auto
 }
@@ -27,8 +27,51 @@ a {
 	display: block;
 	height: 40px;
 	background: #13181d;
+	border-radius: 10px
 }
 
 #navbar a {
 	color: #fff;
+	display: inline-block;
+	height: 40px;
+	line-height: 37px;
+	padding: 0 15px;
+}
+
+#navbar a.active, #navbar a:hover {
+	background: #333;
+}
+
+#main {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 475px
+}
+
+#main li {
+	float: left;
+	height: 96px;
+	list-style-type: none;
+	margin: 6px;
+	position: relative;
+	width: 125px;
+}
+
+#main li img {
+	border-radius: 10px;
+	box-shadow: 0 0 5px #000
+}
+
+#main ul.hidden {
+	display: none
+}
+
+footer {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	margin-top: 20px;
 }
