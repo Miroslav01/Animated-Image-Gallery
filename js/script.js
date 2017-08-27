@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var items = $('#gallery li'),
-		itemsByTags = [];
+		itemsByTags = {};
 
 	// Loop trough
 	items.each(function(i){
@@ -39,8 +39,32 @@ $(document).ready(function(){
 
 		link.addClass('active').siblings().removeClass('active');
 
-		$('#gallery').quicksand(link.data('list').find('li'));
+		$('#gallery').qicksand(link.data('list').find('li'));
+		e.preventDefault();
 
-		$('#navbar a:first').click();
 	});
+
+			$('#navbar a:first').click();
+
+			// create the Lists
+
+			function createList(text, items) {
+				// create empty ul
+				var ul = $('<ul>', {'class':'hidden'});
+
+				$.each(items, function(){
+					$(this).clone().appendTo(ul);
+				});
+
+				// add gallery div
+				ul.appendTo('gallery');
+
+				// create menu item
+				var a = $('<a>', {
+					html:text,
+					href:'#',
+					data: {list:ul}
+				}).appendTo('#navbar');
+			}
+
 });
